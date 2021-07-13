@@ -12,7 +12,7 @@
     "@types/jest": "^25.1.2",
     "@types/react": "^17.0.14",
     "@types/react-dom": "^17.0.9",
-    "@types/webpack-env": "^1.15.1",
+    "@types/webpack-env": "^1.16.2",
     "autoprefixer": "^9.7.4",
     "css-loader": "^3.4.2",
     "cssnano": "^5.0.6",
