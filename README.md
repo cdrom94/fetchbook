@@ -73,4 +73,4 @@ npm run start
 4. Select 'Update Profile' to continue
 5. The profile will upload displaying the dog's potential breed and images of
    the dog's friends a.k.a images of dogs that match the predicted breed
-6. Select 'Upload New Dog' to try again.
+6. Select 'Upload New Dog' to start over.
