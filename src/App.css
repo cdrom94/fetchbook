@@ -1,0 +1,192 @@
+body {
+  background-color: white;
+}
+
+body,
+button {
+  font-family: 'Arimo', sans-serif;
+  text-transform: uppercase;
+  color: #1a301a;
+  font-size: 1rem;
+}
+
+img {
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#image {
+  top: 20%;
+  margin-left: 40px;
+  border: white 2px solid;
+  object-fit: cover;
+}
+
+/* .profile-info {
+	margin-top: 70px;
+} */
+
+.profile-text {
+  margin: 40px;
+}
+p {
+  font-size: 1rem;
+}
+
+.profile-banner {
+  width: 100vw;
+  height: 300px;
+  position: relative;
+  background-color: #eadedb;
+  background-image: linear-gradient(
+    140deg,
+    #eadedb 0%,
+    #d8afcb 50%,
+    #d0f700 100%
+  );
+}
+
+/* sldfjskl */
+/* div {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	padding: 30px;
+} */
+
+input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+button,
+label {
+  width: 300px;
+  border: none;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  margin: 50px 0 0;
+  padding: 10px;
+}
+
+button {
+  cursor: pointer;
+  background-color: rgb(239, 239, 239);
+}
+
+img {
+  object-fit: cover;
+  height: 300px;
+  width: 300px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.carousel-outer {
+  position: relative;
+  margin: 0 40px 40px 40px;
+  font-size: 0.875rem;
+}
+
+.carousel {
+  overflow: scroll;
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-outer::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  width: 80px;
+  top: 0;
+  height: 100%;
+  pointer-events: none;
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.carousel-image {
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.carousel-image img {
+  object-fit: cover;
+  height: 220px;
+  width: 300px;
+}
+
+@media only screen and (max-width: 420px) {
+  body {
+    margin: 0 auto;
+    font-size: 0.875rem;
+  }
+  #image {
+    position: relative;
+    width: 70vw;
+    height: 70vw;
+    display: block;
+    margin: 0 auto 25px;
+  }
+
+  button {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .carousel-outer {
+    margin: 0 20px 20px 20px;
+  }
+
+  .text {
+    margin: 20px;
+  }
+
+  .profile-text {
+    margin: 60px 20px 40px;
+  }
+}
+
+/* .carousel-image img:hover {
+	left: 10px;
+	top: 10px;
+	cursor: pointer;
+} */
+
+/* @media (prefers-reduced-motion: no-preference) {
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+} */
