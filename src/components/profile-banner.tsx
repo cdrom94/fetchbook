@@ -9,7 +9,7 @@ export const ProfileBanner: React.FunctionComponent<IProfileBannerProps> = ({
   return (
     <section className="profile-banner">
       <img
-        id="image"
+        className="profile-picture"
         src={imageURL}
         alt="upload-preview"
         ref={imageRef}

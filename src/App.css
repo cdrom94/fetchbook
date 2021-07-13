@@ -10,33 +10,9 @@ button {
   font-size: 1rem;
 }
 
-img {
-  width: 50%;
-  margin: 0 auto;
-  border-radius: 20px;
-}
-
 h1 {
   text-align: center;
   font-size: 1.5rem;
-}
-
-#image {
-  top: 20%;
-  margin-left: 40px;
-  border: white 2px solid;
-  object-fit: cover;
-}
-
-/* .profile-info {
-	margin-top: 70px;
-} */
-
-.profile-text {
-  margin: 40px;
-}
-p {
-  font-size: 1rem;
 }
 
 .profile-banner {
@@ -52,14 +28,25 @@ p {
   );
 }
 
-/* sldfjskl */
-/* div {
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	align-items: center;
-	padding: 30px;
-} */
+.profile-picture {
+  top: 20%;
+  margin-left: 40px;
+  margin-bottom: 25px;
+  border: white 2px solid;
+  object-fit: cover;
+  height: 300px;
+  width: 300px;
+  position: relative;
+  border-radius: 20px;
+}
+
+.profile-text {
+  margin: 40px;
+}
+
+p {
+  font-size: 1rem;
+}
 
 input {
   width: 0.1px;
@@ -85,30 +72,20 @@ button {
   background-color: rgb(239, 239, 239);
 }
 
-img {
-  object-fit: cover;
-  height: 300px;
-  width: 300px;
-  margin-bottom: 25px;
-  position: relative;
+.carousel-friend-count {
+  margin: 0 40px 40px 40px;
 }
-
 .carousel-outer {
   position: relative;
-  margin: 0 40px 40px 40px;
   font-size: 0.875rem;
 }
 
 .carousel {
   overflow: scroll;
-  display: inline-block;
   width: 100%;
-  white-space: nowrap;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
-.carousel::-webkit-scrollbar {
+/* .carousel::-webkit-scrollbar {
   display: none;
 }
 
@@ -126,25 +103,22 @@ img {
     rgba(255, 255, 255),
     rgba(255, 255, 255, 0)
   );
-}
-
-.carousel-image {
-  margin-right: 20px;
-  display: inline-block;
-}
+} */
 
 .carousel-image img {
-  object-fit: cover;
-  height: 220px;
-  width: 300px;
+  width: 100vw;
 }
+
+/* .carousel-image img {
+  object-fit: cover;
+} */
 
 @media only screen and (max-width: 420px) {
   body {
     margin: 0 auto;
     font-size: 0.875rem;
   }
-  #image {
+  .profile-picture {
     position: relative;
     width: 70vw;
     height: 70vw;
@@ -170,23 +144,6 @@ img {
   }
 }
 
-/* .carousel-image img:hover {
-	left: 10px;
-	top: 10px;
-	cursor: pointer;
-} */
 
-/* @media (prefers-reduced-motion: no-preference) {
-	.App-logo {
-		animation: App-logo-spin infinite 20s linear;
-	}
-}
 
-@keyframes App-logo-spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-} */
+
