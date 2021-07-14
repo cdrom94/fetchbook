@@ -1,10 +1,31 @@
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--black);
+}
+
+:root {
+  --black: #1c1d24;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d8afcb;
+}
+
 body {
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 body,
 button {
-  color: #1a301a;
+  color: var(--black);
   font-family: 'Arimo', sans-serif;
   font-size: 1rem;
   text-transform: uppercase;
@@ -89,35 +110,11 @@ button {
   width: 100%;
 }
 
-/* .carousel::-webkit-scrollbar {
-  display: none;
-}
-
-.carousel-outer::after {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  width: 80px;
-  top: 0;
-  height: 100%;
-  pointer-events: none;
-  right: 0;
-  background: linear-gradient(
-    to left,
-    rgba(255, 255, 255),
-    rgba(255, 255, 255, 0)
-  );
-} */
-
 .carousel-image img {
-  display: inline;
-  white-space: nowrap;
-  width: 30%;
-}
-
-/* .carousel-image img {
+  height: 100%;
   object-fit: cover;
-} */
+  width: 100%;
+}
 
 @media only screen and (max-width: 420px) {
   body {
@@ -136,10 +133,6 @@ button {
     margin: 0 auto;
     width: 100%;
   }
-
-  /* .carousel-outer {
-    margin: 0 20px 20px 20px;
-  } */
 
   .carousel-friend-count {
     margin: 0 20px 20px;
