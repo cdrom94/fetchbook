@@ -137,8 +137,18 @@ button {
     width: 100%;
   }
 
-  .carousel-outer {
+  /* .carousel-outer {
     margin: 0 20px 20px 20px;
+  } */
+
+  .carousel-friend-count {
+    margin: 0 20px 20px;
+  }
+
+  .carousel-image img {
+    display: inline;
+    white-space: nowrap;
+    width: 100vw;
   }
 
   .text {
