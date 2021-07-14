@@ -1,45 +1,43 @@
-import * as tf from '@tensorflow/tfjs';
-
 export interface IStateMachine {
-    initial: string;
-    states: {
-        initial: {
-            next: string;
-        };
-        fetchingData: {
-            next: string;
-        };
-        dataReady: {
-            next: string;
-        };
-        imageReady: {
-            next: string;
-        };
-        scanning: {
-            next: string;
-        };
+  initial: string;
+  states: {
+    initial: {
+      next: string;
     };
+    fetchingData: {
+      next: string;
+    };
+    dataReady: {
+      next: string;
+    };
+    imageReady: {
+      next: string;
+    };
+    scanning: {
+      next: string;
+    };
+  };
 }
 
 export interface IStateToggle {
-    initial: {
-        action: () => Promise<void>;
-        text: string;
-    };
-    fetchingData: {
-        text: string;
-    };
-    dataReady: {
-        action: () => void | undefined;
-        text: string;
-    };
-    imageReady: {
-        action: () => Promise<void>;
-        text: string;
-    };
-    scanning: {
-      text: string;
-    };
+  initial: {
+    action: () => Promise<void>;
+    text: string;
+  };
+  fetchingData: {
+    text: string;
+  };
+  dataReady: {
+    action: () => void | undefined;
+    text: string;
+  };
+  imageReady: {
+    action: () => Promise<void>;
+    text: string;
+  };
+  scanning: {
+    text: string;
+  };
 }
 
 export interface IProfile {
@@ -55,17 +53,11 @@ export interface IPrediction {
 
 export interface IProfileBannerProps {
   imageURL: string;
-  imageRef: React.MutableRefObject<
-  | tf.Tensor3D
-  | ImageData
-  | HTMLImageElement
-  | HTMLCanvasElement
-  | null
-  >
+  imageRef: React.MutableRefObject<HTMLImageElement>;
 }
 
 export interface IProfileTextProps {
-  stateToggle: any;
+  stateToggle: IStateToggle;
   appState: any;
   profile: {
     name: string;
@@ -82,4 +74,10 @@ export interface IProfileTextProps {
 
 export interface IFriendsListProps {
   images: string[];
+}
+
+export interface IProfileInfo {
+  names: string[];
+  cities: string[];
+  treats: string[];
 }

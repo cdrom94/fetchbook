@@ -1,4 +1,3 @@
-//@ts-nocheck
 import * as React from 'react';
 import * as tf from '@tensorflow/tfjs';
 import * as mobilenet from '@tensorflow-models/mobilenet';
@@ -44,23 +43,15 @@ export const App = (): JSX.Element => {
   });
 
   //REFS
-  const imageRef = React.useRef<tf.Tensor3D | ImageData | HTMLImageElement | HTMLCanvasElement >(null);
-//   const imageRef = React.useRef<React.MutableRefObject<
-//   | tf.Tensor3D
-//   | ImageData
-//   | HTMLImageElement
-//   | HTMLCanvasElement
-//   | null
-//   >
-// >(null);
-  const inputRef = React.useRef<HTMLInputElement>(null);
+  const imageRef = React.useRef<HTMLImageElement>();
+  const inputRef = React.useRef<HTMLInputElement>();
 
   //REDUCER
-  const reducer = (state: any, event: string) =>
-  stateMachine.states[state][event] || stateMachine.initial;
+  const reducer = (state: string, action: 'next' = 'next') =>
+    stateMachine.states[state][action] || stateMachine.initial;
 
   const [appState, dispatch] = React.useReducer(reducer, stateMachine.initial);
-  const next = () => dispatch('next');
+  const next = () => dispatch();
 
   React.useEffect(() => {
     document.title = `${profile.name} | Fetchbook`;
@@ -81,16 +72,14 @@ export const App = (): JSX.Element => {
 
   const upload = () => inputRef.current?.click();
 
-  const handleUpload = (event: any) => {
+  const handleUpload = (event: { target: { files: any } }) => {
     const { files } = event.target;
-    if (files.length > 0) {
-      const url: React.SetStateAction<string> = URL.createObjectURL(
-        event.target.files[0],
-      );
-      if (/^image\/+/.test(files[0].type)) {
-        setImageURL(url);
-        next();
-      }
+    const url: React.SetStateAction<string> = URL.createObjectURL(
+      event.target.files[0],
+    );
+    if (/^image\/+/.test(files[0].type)) {
+      setImageURL(url);
+      next();
     }
   };
 
@@ -100,24 +89,25 @@ export const App = (): JSX.Element => {
         dogBreeds[breed]
       }/images/random/${getRandomInt(20, 50)}`,
     )
-      .then((res) => res.json())
-      .then((data) =>
+      .then(res => res.json())
+      .then(data =>
         Array.isArray(data.message) && data.status !== 'error'
           ? setImages(data.message)
           : setImages([]),
       )
-      .catch((error) => {
+      .catch(() => {
         setImages([]);
       });
   };
 
-  const getRandomProperty = (prop: string): string =>
+  const getRandomProperty = (prop: any): string =>
     profileInfo[prop][~~(Math.random() * profileInfo[prop].length)];
 
   const updateProfile: () => Promise<void> = async () => {
     next();
 
-    const results:{
+    const results:
+      | {
           className: string;
           probability: number;
         }[]

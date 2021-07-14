@@ -16,7 +16,6 @@
     "declarationMap": false,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "incremental": true,
     "lib": ["DOM", "DOM.Iterable", "ES2019"],
     "module": "esnext",
     "noImplicitAny": true,
@@ -28,9 +27,10 @@
     "rootDir": "src",
     "sourceMap": true,
     "strict": true,
-    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "strictNullChecks": false,
+    "strictPropertyInitialization": false,
     "target": "es2019",
-    "tsBuildInfoFile": "./.cache/typescript",
     "typeRoots": ["node_modules/@types"]
   },
   "include": ["src"]

@@ -1,8 +1,6 @@
-export const profileInfo: {
-  names: string[];
-  cities: string[];
-  treats: string[];
-} = {
+import { IProfileInfo } from '../types';
+
+export const profileInfo: IProfileInfo = {
   names: [
     'Max',
     'Charlie',

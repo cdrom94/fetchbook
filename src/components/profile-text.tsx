@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { IProfileTextProps } from '../types';
 
 export const ProfileText: React.FunctionComponent<IProfileTextProps> = ({
@@ -21,13 +22,19 @@ export const ProfileText: React.FunctionComponent<IProfileTextProps> = ({
           Breed: {prediction.probability}% chance of {prediction.breed}
         </p>
       </section>
-      <input
-        name="imageInput"
-        type="file"
-        accept="image/*"
-        onChange={handleUpload}
-        ref={inputRef}
-      />
+      <form>
+        <label className="imageInputLabel" htmlFor="imageInput">
+          Upload Image
+        </label>
+        <input
+          id="imageInput"
+          name="imageInput"
+          type="file"
+          accept="image/*"
+          onChange={handleUpload}
+          ref={inputRef}
+        />
+      </form>
     </article>
   );
 };

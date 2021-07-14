@@ -1,5 +1,4 @@
-//@ts-nocheck
-
+import * as React from 'react';
 import { IProfileBannerProps } from '../types';
 
 export const ProfileBanner: React.FunctionComponent<IProfileBannerProps> = ({
