@@ -27,12 +27,12 @@ website. If the image is not recognized as one of the 120 dog breed classes
 within the dataset, a prediction of what that object could be is returned. If
 the image is that of a dog (congrats!), the upload executes a call to the
 [Dog CEO Dog API](https://dog.ceo/dog-api/breeds-list) for images of others dogs
-of the predicted dog breed.
+of the predicted breed.
 
 The user interface resembles that of a contemporary social media platform.
 Internally, Fetchbook is coded with React with Hooks and a finite state machine
 to manage each step of using Fetchbook, from loading the MobileNet model to
-receiving the neural network prediction.
+retrieving the neural network prediction.
 
 Note: As there are over 190 breeds of Canis lupus familiaris, some breeds are
 not represented in this MobileNet model. MobileNets are light-weight, therefore
@@ -72,5 +72,5 @@ npm run start
 3. Select an image (.jpg, .png, .webp etc.) in the file browser pop-up
 4. Select 'Update Profile' to continue
 5. The profile will upload displaying the dog's potential breed and images of
-   the dog's friends a.k.a images of dogs that match the predicted breed
+   the dog's friends a.k.a dogs that also match the predicted breed
 6. Select 'Upload New Dog' to start over
