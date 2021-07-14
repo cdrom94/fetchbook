@@ -102,17 +102,24 @@ button {
 }
 .carousel-outer {
   font-size: 0.875rem;
+  margin-right: 10px;
   position: relative;
 }
 
-.carousel {
-  overflow: scroll;
-  width: 100%;
+.infinite-scroll-component {
+  column-count: 3;
+  column-count: 3;
+  column-count: 3;
+  column-gap: 14px;
+  column-gap: 14px;
+  column-gap: 14px;
+  line-height: 0;
 }
 
 .carousel-image img {
-  height: 100%;
-  object-fit: cover;
+  border-radius: 16px;
+  height: auto;
+  margin: 7px;
   width: 100%;
 }
 
@@ -136,6 +143,13 @@ button {
 
   .carousel-friend-count {
     margin: 0 20px 20px;
+  }
+
+  .infinite-scroll-component {
+    column-count: 1;
+    column-count: 1;
+    column-count: 1;
+    line-height: 0;
   }
 
   .carousel-image img {
