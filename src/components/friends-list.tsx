@@ -8,13 +8,17 @@ export const FriendsList: React.FunctionComponent<IFriendsListProps> = ({
   const [items, setItems] = React.useState(images);
   const [hasMore, setHasMore] = React.useState(true);
 
+  React.useEffect(() => {
+    setItems(images);
+  }, [images]);
+
   const fetchData = () => {
     if (items.length >= 500) {
       setHasMore(false);
       return;
     }
     setTimeout(() => {
-      setItems(items => items.concat(images));
+      setItems(items => items.concat(items));
     }, 500);
   };
 
@@ -25,7 +29,7 @@ export const FriendsList: React.FunctionComponent<IFriendsListProps> = ({
         dataLength={items.length}
         next={fetchData}
         hasMore={hasMore}
-        loader={<h4>Loading...</h4>}
+        loader={<h4></h4>}
         endMessage={
           <p style={{ textAlign: 'center' }}>
             <b>Down to the bone! 🦴</b>
