@@ -47,7 +47,7 @@ perfect for portable access at the expense of accuracy.
 clone this repository
 
 ```bash
-git clone [repo link]
+git clone https://github.com/cdrom94/fetchbook.git
 ```
 
 install dependencies
