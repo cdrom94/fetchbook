@@ -40,7 +40,7 @@ perfect for portable access at the expense of accuracy.
 
 ## Where can I see it?
 
-[Live Demo]() (mobile and desktop)
+[Live Demo](https://fetchbook3000.netlify.app) (mobile and desktop)
 
 ## How can I run it locally?
 
@@ -68,9 +68,9 @@ npm run start
 
 1. Load the MobileNet model by clicking 'Fetch Data'
 2. Upload a new dog image by clicking the ‘Upload New Dog’ button. A file
-   browser will open.
+   browser will open
 3. Select an image (.jpg, .png, .webp etc.) in the file browser pop-up
 4. Select 'Update Profile' to continue
 5. The profile will upload displaying the dog's potential breed and images of
    the dog's friends a.k.a images of dogs that match the predicted breed
-6. Select 'Upload New Dog' to start over.
+6. Select 'Upload New Dog' to start over
