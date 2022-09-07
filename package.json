@@ -95,7 +95,7 @@
     ]
   },
   "devDependencies": {
-    "@ridedott/eslint-config": "^2.14.5",
+    "@ridedott/eslint-config": "^2.20.19",
     "@types/react": "^17.0.14",
     "@types/react-dom": "^17.0.9"
   }
