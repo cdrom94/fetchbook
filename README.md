@@ -40,7 +40,7 @@ perfect for portable access at the expense of accuracy.
 
 ## Where can I see it?
 
-[Live Demo](https://fetchbook3000.netlify.app) (mobile and desktop)
+[Live Demo](https://sadiaromain.com/projects/fetchbook) (mobile and desktop)
 
 ## How can I run it locally?
 
