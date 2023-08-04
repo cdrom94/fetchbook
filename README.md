@@ -23,7 +23,7 @@ Dogs. Facebook. Fetch Api. 🐩
 Fetchbook uses a pre-trained
 [TensorFlow MobileNetV2](https://github.com/tensorflow/tfjs-models/tree/master/mobilenet)
 convolutional neural network to identify dog breeds via images uploaded onto the
-website. If the image is not recognized as one of the 120 dog breed classes
+website. If the object in the image is not recognized as one of the 120 dog breed classes
 within the dataset, a prediction of what that object could be is returned. If
 the image is that of a dog (congrats!), the upload executes a call to the
 [Dog CEO Dog API](https://dog.ceo/dog-api/breeds-list) for images of others dogs
